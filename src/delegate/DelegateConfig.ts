@@ -1,3 +1,3 @@
 export interface DelegateConfig {
-    type: string;
+    module: string;
 }
