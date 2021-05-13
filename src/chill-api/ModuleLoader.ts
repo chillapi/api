@@ -1,4 +1,4 @@
-import { Context } from "node:vm";
+import { Context } from "./Context";
 import { ModuleConfig } from "./ModuleConfig";
 
 export interface ModuleLoader {

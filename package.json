@@ -1,6 +1,6 @@
 {
   "name": "@chillapi/api",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "ChillAPI interface package",
   "main": "index.js",
   "scripts": {
