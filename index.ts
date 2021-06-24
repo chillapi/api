@@ -9,3 +9,4 @@ export * from './src/delegate/MethodDelegate';
 export * from './src/delegate/MethodDelegateConfig';
 
 export * from './src/generated/openapi';
+export * from './src/openapi/OpenAPIUtils';
