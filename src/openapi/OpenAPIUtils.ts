@@ -1,4 +1,4 @@
-import { OpenAPIV3 } from "../generated/openapi";
+import { OpenAPIV3 } from "../generated/openapiv3";
 
 const refPattern = /^#\/components\/schemas\/(.+)$/;
 const batchPathPattern = /^\/([^\/]+)$/;

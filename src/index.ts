@@ -8,5 +8,4 @@ export * from './delegate/DelegateConfig';
 export * from './delegate/MethodDelegate';
 export * from './delegate/MethodDelegateConfig';
 
-export * from './generated/openapi';
 export * from './openapi/OpenAPIUtils';

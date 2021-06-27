@@ -1,4 +1,4 @@
-import { OpenAPIV3 } from '../generated/openapi';
+import { OpenAPIV3 } from '../generated/openapiv3';
 import { loadEntities } from './OpenAPIUtils';
 const api: OpenAPIV3 = {
     openapi: '3.0.1',

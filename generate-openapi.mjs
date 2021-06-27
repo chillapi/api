@@ -16,6 +16,6 @@ https.get(OpenAPIJsonSchemaURL, (response) => {
 
     response.on('end', () => {
         str = str.replace(/^\s*"id":\s*"(.+)",\s*$/gm,"\"id\":\"OpenAPIV3\",");
-        compile(JSON.parse(str), "OpenAPIV3").then(ts => fs.writeFileSync(path.join('src', 'generated', 'openapi.d.ts'), ts))
+        compile(JSON.parse(str), "OpenAPIV3").then(ts => fs.writeFileSync(path.join('src', 'generated', 'openapiv3.d.ts'), ts))
     });
 });
