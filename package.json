@@ -1,8 +1,9 @@
 {
   "name": "@chillapi/api",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "ChillAPI interface package",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "generate-openapi": "rimraf src/generated && node generate-openapi.mjs",
     "prebuild": "rimraf dist/* && npm run generate-openapi",
