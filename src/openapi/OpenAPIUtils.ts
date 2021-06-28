@@ -4,7 +4,7 @@ const refPattern = /^#\/components\/schemas\/(.+)$/;
 const batchPathPattern = /^\/([^\/]+)$/;
 const idPathPattern = /^\/([^\/]+)\/\{id\}$/
 
-interface Property {
+export interface Property {
     name: string;
     isId: boolean;
     type: string;
