@@ -12,6 +12,7 @@
     "build": "npm run lint && npm run tsc",
     "postbuild": "copyfiles -f src/generated/openapiv3.d.ts dist",
     "build:watch": "tsc -w",
+    "pretest": "npm run generate-openapi",
     "test": "jest",
     "prepare": "husky install"
   },
