@@ -24,7 +24,7 @@ const api: OpenAPIV3 = {
     }
 }
 
-test('loads test module', async () => {
+test('loads entities from OpenAPI document', () => {
     const entities = loadEntities(api);
     expect(entities.length).toBe(1);
     expect(entities[0].name).toBe('MyEntity');
