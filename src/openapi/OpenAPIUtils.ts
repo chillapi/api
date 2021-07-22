@@ -8,6 +8,7 @@ export interface Property {
     name: string;
     isId: boolean;
     type: string;
+    description?: string;
     isRequired: boolean;
     reference?: string;
 }
@@ -38,7 +39,8 @@ export function loadEntities(api: OpenAPIV3): Entity[] {
                 isId: pk.toLowerCase() === 'id',
                 isRequired: schema.required && schema.required.indexOf(pk.toLowerCase()) > 0,
                 type: pv.format ? `${pv.type}:${pv.format}` : pv.type,
-                reference: reference(pv)
+                reference: reference(pv),
+                description: pv.description
             })
         }
         entities.push(entity);
