@@ -18,7 +18,7 @@ export interface Entity {
     properties: Property[];
 }
 
-function reference(prop: any): string {
+export function reference(prop: any): string {
     if (!prop || !prop.$ref) {
         return null;
     }
