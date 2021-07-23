@@ -7,3 +7,5 @@ export * from './delegate/MethodDelegate';
 export * from './delegate/MethodDelegateConfig';
 
 export * from './openapi/OpenAPIUtils';
+
+export * from './template/TemplateUtils';
