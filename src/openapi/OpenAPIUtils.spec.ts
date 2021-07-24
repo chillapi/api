@@ -73,7 +73,8 @@ const api: OpenAPIV3 = {
                 "security": [
                     {
                         "auth": [
-                            "openid"
+                            "openid",
+                            "profile"
                         ]
                     }
                 ]
@@ -234,7 +235,7 @@ test('loads entities from OpenAPI document', () => {
 test('loads operations from OpenAPI document', () => {
     const operations = loadOperations(api);
     expect(operations.length).toBe(4);
-    expect (operations[0].path).toBe("/article");
+    expect(operations[0].path).toBe("/article");
     expect(operations[0].method).toBe('get');
     expect(operations[0].queryParameters.length).toBe(5);
     expect(operations[0].responses[0].code).toBe(200);
@@ -243,6 +244,7 @@ test('loads operations from OpenAPI document', () => {
     expect(operations[0].responses[0].content.isArray).toBeTruthy();
     expect(operations[0].responses[0].content.type).toBe('Article');
     expect(operations[0].responses[0].content.isReference).toBeTruthy();
+    expect(operations[0].authorizationScopes).toEqual(['openid', 'profile']);
     expect(operations[2].method).toBe('put');
     expect(operations[2].pathParameters[0].name).toBe('id');
     expect(operations[2].body.type).toBe('Article');

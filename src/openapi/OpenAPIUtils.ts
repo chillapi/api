@@ -118,7 +118,8 @@ export function loadOperations(api: OpenAPIV3): Operation[] {
                     isError: Number(code) >= 400,
                     description: res.description,
                     content: { ...param(null, res?.content && res?.content['application/json'] && res?.content['application/json'].schema), description: res.description }
-                }))
+                })),
+                authorizationScopes: opC.security ? Object.values(opC.security[0])[0] : null
             });
         }
     }
