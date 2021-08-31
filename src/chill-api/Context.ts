@@ -5,7 +5,7 @@ export interface ResponseContainer {
     content?: any
 }
 
-interface Context {
+export interface Context {
     response: ResponseContainer;
     getVar(key: string): any;
     setVar(key: string, value: any): void
